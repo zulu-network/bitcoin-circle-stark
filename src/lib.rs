@@ -26,6 +26,8 @@ pub mod fri;
 pub mod math;
 /// Module for the Merkle tree.
 pub mod merkle_tree;
+/// Module for a FRI polynomial commitment scheme.
+pub mod pcs;
 /// Module for PoW.
 pub mod pow;
 /// Module for the twiddle Merkle tree.
@@ -34,6 +36,9 @@ pub mod twiddle_merkle_tree;
 pub mod utils;
 /// Module for circle stark verifier.
 pub mod verifier;
+
+/// TODO: remove this when completing the stark verifier
+type HashDigest = [u8; 32];
 
 pub(crate) mod treepp {
     pub use bitcoin_script::{define_pushable, script};

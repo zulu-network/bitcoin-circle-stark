@@ -53,6 +53,14 @@ impl ChannelGadget {
             OP_FROMALTSTACK OP_FROMALTSTACK OP_FROMALTSTACK OP_FROMALTSTACK
         }
     }
+
+    /// Absorb a digest out of stack.
+    pub fn mix_digest(digest: [u8; 32]) -> Script {
+        script! {
+            { digest.to_vec() }
+            { Self::absorb_commitment() }
+        }
+    }
 }
 
 #[cfg(test)]
