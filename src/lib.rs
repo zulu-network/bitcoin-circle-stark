@@ -32,6 +32,8 @@ pub mod pow;
 pub mod twiddle_merkle_tree;
 /// Module for utility functions.
 pub mod utils;
+/// Module for circle stark verifier.
+pub mod verifier;
 
 pub(crate) mod treepp {
     pub use bitcoin_script::{define_pushable, script};
